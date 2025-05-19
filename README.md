@@ -35,23 +35,10 @@ Here’s a visual summary of how the command-line interface works.
 You can train a model, generate text, and evaluate its perplexity using three simple subcommands.
 ```mermaid
 graph TD;
-    A[Start: User runs CLI] --> B{Sub-command};
-    B --> C[train];
-    B --> D[generate];
-    B --> E[perplexity];
-
-    C --> C1[Load and preprocess training data];
-    C1 --> C2[Train model with alpha smoothing];
-    C2 --> C3[Save model to disk - .pkl file];
-
-    D --> D1[Load saved model];
-    D1 --> D2[Generate text of given length];
-    D2 --> D3[Print generated output];
-
-    E --> E1[Load saved model];
-    E1 --> E2[Read held-out text file];
-    E2 --> E3[Compute perplexity];
-    E3 --> E4[Print perplexity score];
+    A[User CLI Entry] --> B{Command};
+    B --> C[train: read data → train model with alpha smoothing → save .pkl];
+    B --> D[generate: load model → output sample text];
+    B --> E[perplexity: load model → read file → compute PP score];
 ```
 ## Quickstart Data
 * Europarl (English subset) — used in our example output
