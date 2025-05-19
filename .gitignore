@@ -2,6 +2,15 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.pkl
+
+# Data / models
+data/
+models/
+
+
+# Misc
+.DS_Store
 
 # C extensions
 *.so
