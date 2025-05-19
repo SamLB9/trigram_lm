@@ -1,0 +1,2 @@
+# Everything is in the standard library, but pin pytest for CI / dev
+pytest>=7.0
